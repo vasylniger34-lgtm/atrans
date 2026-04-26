@@ -30,7 +30,7 @@
 
 .animated-truck {
   position: absolute;
-  top: 45%;
+  top: calc(45% - 75px); /* Ще 5px вище */
   transform: translateY(-50%);
   display: flex;
   align-items: center;
@@ -56,10 +56,13 @@
 }
 
 .loader-text {
-  position: relative;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1;
   text-align: center;
-  margin-top: 20vh;
+  width: 100%;
 }
 
 .loader-text h2 {

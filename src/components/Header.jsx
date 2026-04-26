@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Phone, Menu, X } from 'lucide-react';
+import { motion } from 'framer-motion';
 import './Header.css';
 
 export default function Header() {
@@ -29,9 +30,14 @@ export default function Header() {
         </nav>
 
         <div className="header-actions">
-          <a href="tel:+380000000000" className="phone-button">
-            <Phone size={16} /> <span className="phone-text">+380 00 000 00 00</span>
-          </a>
+          <div className="phone-group desktop-phones">
+            <a href="tel:+380634872745" className="phone-button">
+              <Phone size={16} /> <span className="phone-text">+380 63 487 27 45</span>
+            </a>
+            <a href="tel:+380974041808" className="phone-button outline">
+              <Phone size={16} /> <span className="phone-text">+380 97 404 18 08</span>
+            </a>
+          </div>
           
           <button className="mobile-toggle" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}

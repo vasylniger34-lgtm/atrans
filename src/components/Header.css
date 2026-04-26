@@ -11,11 +11,11 @@
 
 .main-header.scrolled {
   background: var(--header-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   padding: 16px 0;
   border-bottom: 1px solid var(--border-color);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  box-shadow: var(--shadow);
 }
 
 .header-container {
@@ -27,12 +27,17 @@
   justify-content: space-between;
 }
 
+.logo-area {
+  display: flex;
+  align-items: center;
+}
+
 .logo-text {
   font-family: var(--font-heading);
   font-weight: 800;
   font-size: 1.8rem;
   letter-spacing: -0.05em;
-  color: var(--text-color);
+  color: var(--accent-color);
 }
 
 .desktop-nav {
@@ -42,15 +47,16 @@
 
 .desktop-nav a {
   font-size: 0.95rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--text-color);
-  opacity: 0.8;
+  opacity: 0.7;
   position: relative;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s, color 0.2s;
 }
 
 .desktop-nav a:hover {
   opacity: 1;
+  color: var(--accent-color);
 }
 
 .header-actions {
@@ -59,23 +65,40 @@
   gap: 16px;
 }
 
+.phone-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .phone-button {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: transparent;
-  border: 1px solid var(--border-color);
-  color: var(--text-color);
+  background: var(--accent-light);
+  border: 1px solid transparent;
+  color: var(--accent-color);
   padding: 10px 20px;
   border-radius: 30px;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   transition: all 0.2s;
 }
 
 .phone-button:hover {
-  background: var(--text-color);
-  color: var(--bg-color);
+  background: var(--accent-color);
+  color: #fff;
+}
+
+.phone-button.outline {
+  background: transparent;
+  border-color: var(--border-color);
+  color: var(--text-color);
+}
+
+.phone-button.outline:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .mobile-toggle {
@@ -84,6 +107,12 @@
   border: none;
   color: var(--text-color);
   cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .phone-group {
+    display: none; /* Hide double phones on small screens to save space, or show just icon */
+  }
 }
 
 @media (max-width: 768px) {
@@ -107,13 +136,5 @@
 
   .mobile-toggle {
     display: block;
-  }
-
-  .phone-text {
-    display: none;
-  }
-  .phone-button {
-    padding: 10px;
-    border-radius: 50%;
   }
 }

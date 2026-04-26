@@ -1,66 +1,87 @@
 import React from 'react';
 import { Route, ShieldCheck, Clock, FileCheck } from 'lucide-react';
+import { motion } from 'framer-motion';
 import './ContentSection.css';
 
 export default function ContentSection() {
   const routes = [
-    { from: 'Німеччина', icon: '🇩🇪', active: true },
-    { from: 'Польща', icon: '🇵🇱', active: true },
+    { from: 'Бельгія', icon: '🇧🇪', active: true },
     { from: 'Нідерланди', icon: '🇳🇱', active: true },
-    { from: 'Іспанія', icon: '🇪🇸', active: true },
-    { from: 'Італія', icon: '🇮🇹', active: true },
-    { from: 'Франція', icon: '🇫🇷', active: true },
+    { from: 'Швейцарія', icon: '🇨🇭', active: true },
+    { from: 'Австрія', icon: '🇦🇹', active: true },
+    { from: 'Данія', icon: '🇩🇰', active: true },
+    { from: 'Польща', icon: '🇵🇱', active: true },
+    { from: 'Чехія', icon: '🇨🇿', active: true },
+    { from: 'Литва', icon: '🇱🇹', active: true },
   ];
 
   return (
     <div className="content-wrapper">
       <section className="routes-section" id="routes">
-        <div className="section-header">
+        <motion.div 
+          className="section-header"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+        >
           <h2>Наші регулярні рейси</h2>
           <p>Щотижневі відправлення з найбільших хабів Європи.</p>
-        </div>
+        </motion.div>
         
         <div className="routes-grid">
           {routes.map((r, i) => (
-            <div className="route-card glass" key={i}>
+            <motion.div 
+              className="route-card glass" 
+              key={i}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+            >
               <div className="route-icon">{r.icon}</div>
               <div className="route-info">
                 <h4>{r.from} — Україна</h4>
                 <span>{r.active ? 'Активні рейси' : 'Під запит'}</span>
               </div>
-              <button className="route-btn">Отримати тариф</button>
-            </div>
+              <a href="#home" className="route-btn">Отримати тариф</a>
+            </motion.div>
           ))}
         </div>
       </section>
 
       <section className="benefits-section" id="services">
-        <div className="section-header center">
+        <motion.div 
+          className="section-header center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+        >
           <h2>Коли деталі створюють успіх</h2>
           <p>Чому тисячі клієнтів обирають саме A-TRANS для перевезення власних авто.</p>
-        </div>
+        </motion.div>
 
         <div className="benefits-grid">
-          <div className="benefit-card glass">
-            <ShieldCheck size={40} className="b-icon" />
-            <h4>Повне страхування</h4>
-            <p>Безпека без компромісів. Всі авто застраховані під час транзиту.</p>
-          </div>
-          <div className="benefit-card glass">
-            <FileCheck size={40} className="b-icon" />
-            <h4>Фіксована ціна</h4>
-            <p>Жодних сюрпризів. Вартість закріплюється у договорі перед відправкою.</p>
-          </div>
-          <div className="benefit-card glass">
-            <Route size={40} className="b-icon" />
-            <h4>Митне оформлення</h4>
-            <p>Усі документи «Під ключ», мінімізація часу перебування на кордоні.</p>
-          </div>
-          <div className="benefit-card glass">
-            <Clock size={40} className="b-icon" />
-            <h4>Цілодобова підтримка</h4>
-            <p>Завжди на зв'язку. Інформуємо про статус вашого авто в реальному часі.</p>
-          </div>
+          {[
+            { icon: ShieldCheck, title: "Повне страхування", desc: "Безпека без компромісів. Всі авто застраховані під час транзиту." },
+            { icon: FileCheck, title: "Фіксована ціна", desc: "Жодних сюрпризів. Вартість закріплюється у договорі перед відправкою." },
+            { icon: Route, title: "Митне оформлення", desc: "Усі документи «Під ключ», мінімізація часу перебування на кордоні." },
+            { icon: Clock, title: "Цілодобова підтримка", desc: "Завжди на зв'язку. Інформуємо про статус вашого авто в реальному часі." }
+          ].map((benefit, i) => (
+            <motion.div 
+              className="benefit-card glass" 
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: i * 0.15 }}
+            >
+              <benefit.icon size={40} className="b-icon" />
+              <h4>{benefit.title}</h4>
+              <p>{benefit.desc}</p>
+            </motion.div>
+          ))}
         </div>
       </section>
     </div>
