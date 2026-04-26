@@ -27,6 +27,14 @@ export default function Header() {
           <a href="#services" onClick={() => setMobileMenuOpen(false)}>Послуги</a>
           <a href="#routes" onClick={() => setMobileMenuOpen(false)}>Маршрути</a>
           <a href="#contacts" onClick={() => setMobileMenuOpen(false)}>Контакти</a>
+          <div className="mobile-phones">
+            <a href="tel:+380634872745" className="phone-button">
+              <Phone size={16} /> <span>+380 63 487 27 45</span>
+            </a>
+            <a href="tel:+380974041808" className="phone-button outline">
+              <Phone size={16} /> <span>+380 97 404 18 08</span>
+            </a>
+          </div>
         </nav>
 
         <div className="header-actions">

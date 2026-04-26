@@ -89,3 +89,19 @@
   background: var(--border-color);
   z-index: 0;
 }
+
+@media (max-width: 600px) {
+  .truck-svg {
+    width: 240px;
+  }
+  .animated-truck {
+    top: calc(45% - 50px);
+  }
+  .truck-wrapper::after {
+    top: calc(45% + 55px);
+  }
+  .loader-text h2 {
+    font-size: 2rem;
+  }
+}
+

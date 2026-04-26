@@ -54,3 +54,23 @@
   border-color: var(--accent-color);
   font-weight: 600;
 }
+
+@media (max-width: 600px) {
+  .theme-switcher {
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+    gap: 8px;
+    border-radius: 8px;
+  }
+  
+  .switcher-header {
+    font-size: 0.8rem;
+  }
+  
+  .switch-btn {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+}
+
