@@ -64,7 +64,7 @@ export default function HeroCalculator() {
             </div>
 
             <div className="form-group">
-              <label><MapPin size={16}/> Місто / Регіон:</label>
+              <label><MapPin size={16}/> Найближче місто відправки:</label>
               <select value={groupId} onChange={(e) => setGroupId(e.target.value)}>
                 {activeCountry?.groups.map(g => (
                   <option key={g.id} value={g.id}>{g.name}</option>
