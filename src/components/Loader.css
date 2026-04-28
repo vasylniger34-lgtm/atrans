@@ -57,26 +57,17 @@
 
 .loader-text {
   position: absolute;
-  top: 15%;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -55%);
   z-index: 1;
   text-align: center;
-  width: 100%;
 }
 
-.loader-text h2 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  color: var(--text-color);
-  letter-spacing: 0.1em;
-  margin-bottom: 8px;
-}
-
-.loader-text p {
-  color: var(--accent-color);
-  letter-spacing: 0.3em;
-  font-weight: 600;
-  font-size: 0.9rem;
+.loader-logo-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .truck-wrapper::after {

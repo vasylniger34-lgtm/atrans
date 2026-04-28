@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import LogoBadge from './LogoBadge';
 import './Loader.css';
 
 export default function Loader({ isAnimating }) {
@@ -26,11 +27,14 @@ export default function Loader({ isAnimating }) {
            </motion.div>
            
            <div className="loader-text">
-              <div className="loader-logo" style={{ marginBottom: '20px' }}>
-                <img src="/logo-new.png" alt="A-TRANS Logo" style={{ height: '80px' }} />
-              </div>
-             <h2>A-TRANS</h2>
-             <p>PREMIUM AUTO DELIVERY</p>
+              <motion.div
+                className="loader-logo-badge"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }}
+              >
+                <LogoBadge size={280} />
+              </motion.div>
            </div>
          </div>
       </motion.div>
