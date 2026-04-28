@@ -57,9 +57,9 @@
 
 .loader-text {
   position: absolute;
-  top: 50%;
+  top: 15%;
   left: 50%;
-  transform: translate(-50%, -85%);
+  transform: translateX(-50%);
   z-index: 1;
   text-align: center;
 }
