@@ -21,13 +21,7 @@ export default function LogoBadge({ size = 320, className = '' }) {
               A ${r * 0.9} ${r * 0.9} 0 0 1 ${half + r * 0.88} ${half - r * 0.1}`}
           fill="none"
         />
-        {/* Arc path for bottom decorative text */}
-        <path
-          id="bottomArc"
-          d={`M ${half - r * 0.7} ${half + r * 0.65}
-              A ${r * 0.75} ${r * 0.75} 0 0 0 ${half + r * 0.7} ${half + r * 0.65}`}
-          fill="none"
-        />
+
       </defs>
 
       {/* --- Outer Circle Border --- */}
@@ -166,18 +160,7 @@ export default function LogoBadge({ size = 320, className = '' }) {
         +38 063 987 27 45
       </text>
 
-      {/* --- Bottom Arc Text: A-TRANS.COM.UA --- */}
-      <text
-        fill="var(--text-muted, #64748b)"
-        fontSize="10"
-        fontFamily="'Inter', sans-serif"
-        fontWeight="600"
-        letterSpacing="3"
-      >
-        <textPath href="#bottomArc" startOffset="50%" textAnchor="middle">
-          A-TRANS.COM.UA
-        </textPath>
-      </text>
+
 
       {/* --- Small decorative dots (separator) --- */}
       <circle cx={half - 55} cy={half - r * 0.2 + 8} r="2" fill="var(--accent-color, #0f4c81)" opacity="0.4" />
