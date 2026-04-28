@@ -169,6 +169,16 @@ select:hover {
   border-color: #cbd5e1;
 }
 
+select:disabled {
+  background-color: var(--accent-light);
+  border-color: var(--accent-color);
+  opacity: 0.8;
+  cursor: default;
+  color: var(--accent-color);
+  font-weight: 700;
+  background-image: none;
+}
+
 .calc-footer {
   display: flex;
   justify-content: space-between;

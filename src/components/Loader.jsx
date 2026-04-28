@@ -21,16 +21,16 @@ export default function Loader({ isAnimating }) {
              animate={{ x: '120vw' }}
              transition={{ duration: 4, ease: 'easeInOut' }}
            >
-             <img src="/truck.png" alt="Auto Transporter" className="truck-svg" />
+             <img src="/truck-new.png" alt="Auto Transporter" className="truck-svg" />
              <div className="speed-lines"></div>
            </motion.div>
            
            <div className="loader-text">
-             <div className="loader-logo" style={{ fontSize: '3rem', marginBottom: '10px', color: 'var(--accent-color)' }}>
-               <span style={{ border: '2px solid var(--accent-color)', borderRadius: '12px', padding: '0 16px', display: 'inline-block' }}>A</span>
-             </div>
+              <div className="loader-logo" style={{ marginBottom: '20px' }}>
+                <img src="/logo-new.png" alt="A-TRANS Logo" style={{ height: '80px' }} />
+              </div>
              <h2>A-TRANS</h2>
-             <p>PREMIUM AUTO LOGISTICS</p>
+             <p>PREMIUM AUTO DELIVERY</p>
            </div>
          </div>
       </motion.div>
