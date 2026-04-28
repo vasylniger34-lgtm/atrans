@@ -59,7 +59,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -55%);
+  transform: translate(-50%, -85%);
   z-index: 1;
   text-align: center;
 }

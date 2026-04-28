@@ -33,7 +33,7 @@ export default function Loader({ isAnimating }) {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }}
               >
-                <LogoBadge size={280} />
+                <LogoBadge size={180} />
               </motion.div>
            </div>
          </div>
