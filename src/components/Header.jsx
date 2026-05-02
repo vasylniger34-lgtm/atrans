@@ -19,7 +19,7 @@ export default function Header() {
     <header className={`main-header ${scrolled ? 'scrolled' : ''}`}>
       <div className="header-container">
         <div className="logo-area">
-          <img src="/logo_new.png" alt="A-TRANS" className="logo-image" />
+          <span className="logo-text">A-TRANS</span>
         </div>
         
         <nav className={`desktop-nav ${mobileMenuOpen ? 'mobile-open' : ''}`}>

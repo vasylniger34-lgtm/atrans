@@ -32,12 +32,6 @@
   align-items: center;
 }
 
-.logo-image {
-  height: 48px;
-  width: auto;
-  object-fit: contain;
-}
-
 .logo-text {
   font-family: var(--font-heading);
   font-weight: 800;
@@ -155,10 +149,6 @@
   
   .mobile-phones {
     display: flex;
-  }
-  
-  .logo-image {
-    height: 36px;
   }
   
   .logo-text {
