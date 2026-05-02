@@ -38,7 +38,7 @@
 }
 
 .truck-svg {
-  width: 320px; 
+  width: 380px; 
   height: auto;
   color: var(--text-color);
 }
@@ -83,7 +83,7 @@
 
 @media (max-width: 600px) {
   .truck-svg {
-    width: 240px;
+    width: 280px;
   }
   .animated-truck {
     top: calc(45% - 50px);

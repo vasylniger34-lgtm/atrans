@@ -162,14 +162,35 @@
     padding: 60px 15px;
     gap: 80px;
   }
+
+  .section-header {
+    text-align: center;
+  }
   
   .about-content {
     flex-direction: column;
     padding: 24px;
+    text-align: center;
+  }
+
+  .about-list li {
+    flex-direction: column;
+    align-items: center;
   }
   
   .contacts-grid {
     grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .social-grid {
+    justify-content: center;
   }
 }
 
