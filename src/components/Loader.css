@@ -70,6 +70,12 @@
   justify-content: center;
 }
 
+.loader-logo-img {
+  height: 120px;
+  width: auto;
+  object-fit: contain;
+}
+
 .truck-wrapper::after {
   content: '';
   position: absolute;
@@ -93,6 +99,9 @@
   }
   .loader-text h2 {
     font-size: 2rem;
+  }
+  .loader-logo-img {
+    height: 80px;
   }
 }
 

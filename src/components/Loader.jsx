@@ -32,8 +32,7 @@ export default function Loader({ isAnimating }) {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }}
-              >
-                <LogoBadge size={180} />
+                <img src="/logo_new.png" alt="A-TRANS" className="loader-logo-img" />
               </motion.div>
            </div>
          </div>
