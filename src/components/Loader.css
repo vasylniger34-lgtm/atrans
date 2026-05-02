@@ -57,7 +57,7 @@
 
 .loader-text {
   position: absolute;
-  top: 15%;
+  top: 5%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
@@ -71,7 +71,8 @@
 }
 
 .loader-logo-img {
-  height: 120px;
+  height: 320px;
+  max-width: 90vw;
   width: auto;
   object-fit: contain;
 }
@@ -101,7 +102,7 @@
     font-size: 2rem;
   }
   .loader-logo-img {
-    height: 80px;
+    height: 200px;
   }
 }
 
