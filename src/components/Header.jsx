@@ -24,15 +24,15 @@ export default function Header() {
         
         <nav className={`desktop-nav ${mobileMenuOpen ? 'mobile-open' : ''}`}>
           <a href="#home" onClick={() => setMobileMenuOpen(false)}>Головна</a>
-          <a href="#services" onClick={() => setMobileMenuOpen(false)}>Послуги</a>
-          <a href="#routes" onClick={() => setMobileMenuOpen(false)}>Маршрути</a>
+          <a href="#works" onClick={() => setMobileMenuOpen(false)}>Наші роботи</a>
+          <a href="#about" onClick={() => setMobileMenuOpen(false)}>Про нас</a>
           <a href="#contacts" onClick={() => setMobileMenuOpen(false)}>Контакти</a>
           <div className="mobile-phones">
             <a href="tel:+380634872745" className="phone-button">
               <Phone size={16} /> <span>+380 63 487 27 45</span>
             </a>
-            <a href="tel:+380974041808" className="phone-button outline">
-              <Phone size={16} /> <span>+380 97 404 18 08</span>
+            <a href="tel:+380968132137" className="phone-button outline">
+              <Phone size={16} /> <span>+380 96 813 21 37</span>
             </a>
           </div>
         </nav>
@@ -42,8 +42,8 @@ export default function Header() {
             <a href="tel:+380634872745" className="phone-button">
               <Phone size={16} /> <span className="phone-text">+380 63 487 27 45</span>
             </a>
-            <a href="tel:+380974041808" className="phone-button outline">
-              <Phone size={16} /> <span className="phone-text">+380 97 404 18 08</span>
+            <a href="tel:+380968132137" className="phone-button outline">
+              <Phone size={16} /> <span className="phone-text">+380 96 813 21 37</span>
             </a>
           </div>
           

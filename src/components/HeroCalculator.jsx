@@ -33,7 +33,6 @@ export default function HeroCalculator() {
           <div className="hero-logo-wrapper">
             <img src="/logo_round.png" alt="A-TRANS" className="hero-logo-img" />
           </div>
-          <div className="badge">Доставка авто з Європи</div>
           <h1>Доставка авто з Європи <br/><span>до України</span></h1>
           <p>
             Надійна команда, яка цінує ваш час та гроші. Отримайте повний спектр логістичних послуг з фіксованою ціною у договорі.

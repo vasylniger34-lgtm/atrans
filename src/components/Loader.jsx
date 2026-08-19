@@ -18,22 +18,27 @@ export default function Loader({ isAnimating }) {
          <div className="truck-wrapper">
            <motion.div 
              className="animated-truck"
-             initial={{ x: '-120vw' }}
-             animate={{ x: '120vw' }}
-             transition={{ duration: 4, ease: 'easeInOut' }}
+             initial={{ x: '-120vw', y: '-50%' }}
+             animate={{ x: '120vw', y: '-50%' }}
+             transition={{ duration: 3.6, ease: [0.25, 0.8, 0.25, 1] }}
            >
-             <img src="/truck-new.png" alt="Auto Transporter" className="truck-svg" />
-             <div className="speed-lines"></div>
+             <div className="truck-graphic-container">
+               <img src="/truck-logo.png" alt="A-TRANS Auto Transporter" className="truck-svg" />
+               <div className="headlight-beam"></div>
+               <div className="speed-lines"></div>
+               <div className="gold-trail"></div>
+             </div>
            </motion.div>
            
            <div className="loader-text">
               <motion.div
                 className="loader-logo-badge"
-                initial={{ opacity: 0, scale: 0.8 }}
+                initial={{ opacity: 0, scale: 0.85 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }}
+                transition={{ duration: 0.9, ease: 'easeOut', delay: 0.2 }}
               >
                 <img src="/logo_round.png" alt="A-TRANS" className="loader-logo-img" />
+                <div className="logo-glow-pulse"></div>
               </motion.div>
            </div>
          </div>

@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Loader from './components/Loader';
 import HeroCalculator from './components/HeroCalculator';
 import ContentSection from './components/ContentSection';
+import WorksGallery from './components/WorksGallery';
 
 function App() {
   const [isAnimating, setIsAnimating] = useState(true);
@@ -27,6 +28,7 @@ function App() {
       <Header />
       <main>
         <HeroCalculator />
+        <WorksGallery />
         <ContentSection />
       </main>
     </div>

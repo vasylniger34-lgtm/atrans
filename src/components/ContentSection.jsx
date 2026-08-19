@@ -86,8 +86,9 @@ export default function ContentSection() {
             <div className="contact-item">
               <PhoneForwarded size={24} />
               <div>
-                <span>Телефон:</span>
+                <span>Телефони:</span>
                 <a href="tel:+380634872745">+380 63 487 27 45</a>
+                <a href="tel:+380968132137" style={{ display: 'block', marginTop: '4px' }}>+380 96 813 21 37</a>
               </div>
             </div>
             <div className="contact-item">
