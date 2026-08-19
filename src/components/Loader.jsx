@@ -13,12 +13,12 @@ export default function Loader({ isAnimating }) {
         initial={{ x: 0 }}
         animate={{ x: '100%' }}
         exit={{ x: '100%' }}
-        transition={{ duration: 0.9, ease: [0.4, 0, 0.2, 1], delay: 2.65 }}
+        transition={{ duration: 0.85, ease: [0.4, 0, 0.2, 1], delay: 2.65 }}
       >
          <div className="truck-wrapper">
            <motion.div 
              className="animated-truck"
-             initial={{ x: '-250px', y: '-50%' }}
+             initial={{ x: '-100%', y: '-50%' }}
              animate={{ x: '100vw', y: '-50%' }}
              transition={{ duration: 3.0, ease: "linear" }}
            >
