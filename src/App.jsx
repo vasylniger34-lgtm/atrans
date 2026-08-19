@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsAnimating(false);
-    }, 6500);
+    }, 9000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -28,8 +28,8 @@ function App() {
       <Header />
       <main>
         <HeroCalculator />
-        <WorksGallery />
         <ContentSection />
+        <WorksGallery />
       </main>
     </div>
   );
