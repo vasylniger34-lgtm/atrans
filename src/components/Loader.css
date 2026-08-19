@@ -30,7 +30,7 @@
 
 .animated-truck {
   position: absolute;
-  top: calc(50% - 10px);
+  top: calc(50% + 10px);
   z-index: 3;
   display: flex;
   align-items: center;
@@ -148,10 +148,10 @@
     width: 150px;
   }
   .animated-truck {
-    top: calc(50% - 10px);
+    top: calc(50% + 5px);
   }
   .truck-wrapper::after {
-    top: calc(50% + 22px);
+    top: calc(50% + 25px);
   }
   .loader-logo-img {
     height: 180px;
