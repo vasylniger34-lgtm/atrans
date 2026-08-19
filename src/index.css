@@ -5,21 +5,21 @@
   --font-heading: 'Outfit', sans-serif;
   --transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 
-  /* Premium Grey-White-Blue Palette */
-  --bg-color: #f5f7fa; /* Light grey background */
-  --text-color: #1e293b; /* Dark grey slate */
-  --text-muted: #64748b; /* Slate grey muted */
+  /* Premium Elite Black & Gold Palette */
+  --bg-color: #060606; /* Pure luxury deep black */
+  --text-color: #f9fafb; /* Warm crisp white */
+  --text-muted: #9ca3af; /* Light grey slate */
   
-  --accent-color: #0f4c81; /* Classic Blue */
-  --accent-hover: #0a365c; /* Darker blue */
-  --accent-light: rgba(15, 76, 129, 0.08); /* Light blue for subtle backgrounds */
+  --accent-color: #d4af37; /* Metallic Gold */
+  --accent-hover: #e5c158; /* Premium golden light */
+  --accent-light: rgba(212, 175, 55, 0.08); /* Subtle gold background tint */
   
-  --card-bg: #ffffff; /* Pure white */
-  --border-color: #e2e8f0;
-  --header-bg: rgba(255, 255, 255, 0.9);
-  --backdrop: blur(16px);
-  --shadow: 0 10px 40px rgba(30, 41, 59, 0.06);
-  --shadow-hover: 0 20px 50px rgba(15, 76, 129, 0.1);
+  --card-bg: #111111; /* Sleek dark card background */
+  --border-color: #1f1f1f; /* Dark slate borders */
+  --header-bg: rgba(6, 6, 6, 0.85); /* Dark blur header background */
+  --backdrop: blur(20px);
+  --shadow: 0 10px 45px rgba(0, 0, 0, 0.8);
+  --shadow-hover: 0 20px 50px rgba(212, 175, 55, 0.12); /* Gold glow shadow */
 }
 
 * {
@@ -73,7 +73,7 @@ ul {
   gap: 8px;
   padding: 14px 28px;
   border-radius: 8px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1rem;
   cursor: pointer;
   border: none;
@@ -83,12 +83,12 @@ ul {
 
 .cta-button.primary {
   background-color: var(--accent-color);
-  color: #fff;
-  box-shadow: 0 4px 14px rgba(15, 76, 129, 0.3);
+  color: #060606;
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.25);
 }
 
 .cta-button.primary:hover {
   background-color: var(--accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(15, 76, 129, 0.4);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
 }

@@ -32,12 +32,16 @@
   align-items: center;
 }
 
-.logo-text {
-  font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: 1.8rem;
-  letter-spacing: -0.05em;
-  color: var(--accent-color);
+.header-logo-img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  transition: height var(--transition);
+}
+
+.scrolled .header-logo-img {
+  height: 40px;
 }
 
 .desktop-nav {
@@ -87,7 +91,7 @@
 
 .phone-button:hover {
   background: var(--accent-color);
-  color: #fff;
+  color: #060606;
 }
 
 .phone-button.outline {
@@ -151,8 +155,11 @@
     display: flex;
   }
   
-  .logo-text {
-    font-size: 1.5rem;
+  .header-logo-img {
+    height: 38px;
+  }
+  .scrolled .header-logo-img {
+    height: 30px;
   }
   
   .main-header {

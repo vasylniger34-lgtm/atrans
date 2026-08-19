@@ -30,6 +30,9 @@ export default function HeroCalculator() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
+          <div className="hero-logo-wrapper">
+            <img src="/logo_round.png" alt="A-TRANS" className="hero-logo-img" />
+          </div>
           <div className="badge">Доставка авто з Європи</div>
           <h1>Доставка авто з Європи <br/><span>до України</span></h1>
           <p>

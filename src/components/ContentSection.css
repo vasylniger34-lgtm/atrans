@@ -91,6 +91,12 @@
   max-width: 100%;
   height: auto;
   border-radius: 16px;
+  filter: grayscale(0.85) brightness(1.1) drop-shadow(0 0 15px rgba(212, 175, 55, 0.15));
+  transition: var(--transition);
+}
+
+.about-image img:hover {
+  filter: grayscale(0.2) brightness(1.2) drop-shadow(0 0 25px rgba(212, 175, 55, 0.35));
 }
 
 /* Contacts Section */
@@ -152,9 +158,10 @@
 
 .social-btn:hover {
   background: var(--accent-color);
-  color: #fff;
+  color: #060606;
   border-color: var(--accent-color);
   transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2);
 }
 
 @media (max-width: 768px) {

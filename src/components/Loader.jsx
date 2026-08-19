@@ -33,7 +33,7 @@ export default function Loader({ isAnimating }) {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }}
               >
-                <img src="/logo_new.png" alt="A-TRANS" className="loader-logo-img" />
+                <img src="/logo_round.png" alt="A-TRANS" className="loader-logo-img" />
               </motion.div>
            </div>
          </div>
