@@ -110,25 +110,6 @@
   z-index: 2;
 }
 
-.work-info {
-  padding: 18px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.work-info h4 {
-  font-size: 1.05rem;
-  color: var(--text-color);
-  font-weight: 600;
-}
-
-.work-loc {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  font-weight: 500;
-}
-
 /* Lightbox Modal */
 .lightbox-overlay {
   position: fixed;
@@ -163,27 +144,9 @@
 
 .lightbox-img {
   max-width: 100%;
-  max-height: 75vh;
+  max-height: 80vh;
   object-fit: contain;
   display: block;
-}
-
-.lightbox-caption {
-  padding: 16px 24px;
-  background: #111111;
-  border-top: 1px solid #222;
-  color: #fff;
-}
-
-.lightbox-caption h3 {
-  font-size: 1.2rem;
-  color: var(--accent-color);
-  margin-bottom: 4px;
-}
-
-.lightbox-caption p {
-  font-size: 0.9rem;
-  color: var(--text-muted);
 }
 
 .close-btn {

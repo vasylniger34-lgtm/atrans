@@ -13,17 +13,17 @@ export default function Loader({ isAnimating }) {
         initial={{ x: 0 }}
         animate={{ x: '100%' }}
         exit={{ x: '100%' }}
-        transition={{ duration: 1.5, ease: [0.65, 0, 0.35, 1], delay: 3.5 }}
+        transition={{ duration: 1.4, ease: [0.65, 0, 0.35, 1], delay: 4.2 }}
       >
          <div className="truck-wrapper">
            <motion.div 
              className="animated-truck"
              initial={{ x: '-120vw', y: '-50%' }}
              animate={{ x: '120vw', y: '-50%' }}
-             transition={{ duration: 3.6, ease: [0.25, 0.8, 0.25, 1] }}
+             transition={{ duration: 4.5, ease: [0.33, 1, 0.68, 1] }}
            >
              <div className="truck-graphic-container">
-               <img src="/truck-logo.png" alt="A-TRANS Auto Transporter" className="truck-svg" />
+               <img src="/truck-animated.png" alt="A-TRANS Auto Transporter" className="truck-svg" />
                <div className="headlight-beam"></div>
                <div className="speed-lines"></div>
                <div className="gold-trail"></div>

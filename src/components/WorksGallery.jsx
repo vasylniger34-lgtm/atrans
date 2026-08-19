@@ -65,10 +65,6 @@ export default function WorksGallery() {
                   <CheckCircle2 size={14} /> <span>Доставили</span>
                 </div>
               </div>
-              <div className="work-info">
-                <h4>{item.title}</h4>
-                <span className="work-loc">{item.loc}</span>
-              </div>
             </motion.div>
           ))}
         </div>
@@ -96,13 +92,9 @@ export default function WorksGallery() {
               <div className="lightbox-img-wrapper">
                 <img
                   src={worksList[selectedIdx].src}
-                  alt={worksList[selectedIdx].title}
+                  alt="Доставлене авто"
                   className="lightbox-img"
                 />
-                <div className="lightbox-caption">
-                  <h3>{worksList[selectedIdx].title}</h3>
-                  <p>{worksList[selectedIdx].loc} — Статус: Успішно доставлено</p>
-                </div>
               </div>
 
               <button className="nav-btn next" onClick={handleNext}>
