@@ -95,9 +95,8 @@ export function ContactsSection() {
         <div className="social-links glass">
           <h3>Ми в соцмережах</h3>
           <div className="social-grid">
-            <a href="#" className="social-btn instagram">Instagram</a>
-            <a href="#" className="social-btn facebook">Facebook</a>
-            <a href="#" className="social-btn telegram">Telegram</a>
+            <a href="https://www.instagram.com/a_trans__" target="_blank" rel="noreferrer" className="social-btn instagram">Instagram</a>
+            <a href="https://www.tiktok.com/@atrans4" target="_blank" rel="noreferrer" className="social-btn tiktok">TikTok</a>
           </div>
         </div>
       </div>
