@@ -19,8 +19,26 @@ export const DESTINATIONS = [
         }
       },
       {
+        "id": "de_bremen",
+        "name": "Бремен",
+        "prices": {
+          "w1": 850,
+          "w2": 900,
+          "w3": 1000
+        }
+      },
+      {
         "id": "de_g1_1",
         "name": "Гамбург",
+        "prices": {
+          "w1": 800,
+          "w2": 850,
+          "w3": 1000
+        }
+      },
+      {
+        "id": "de_hannover",
+        "name": "Гановер",
         "prices": {
           "w1": 800,
           "w2": 850,
@@ -37,12 +55,30 @@ export const DESTINATIONS = [
         }
       },
       {
+        "id": "de_dresden",
+        "name": "Дрезден",
+        "prices": {
+          "w1": 750,
+          "w2": 800,
+          "w3": 900
+        }
+      },
+      {
         "id": "de_g2_1",
         "name": "Дюссельдорф",
         "prices": {
           "w1": 800,
           "w2": 850,
           "w3": 1000
+        }
+      },
+      {
+        "id": "de_kassel",
+        "name": "Кассель",
+        "prices": {
+          "w1": 800,
+          "w2": 850,
+          "w3": 950
         }
       },
       {
