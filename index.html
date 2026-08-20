@@ -12,7 +12,7 @@
     <title>A-TRANS — Доставка авто з Європи | Автовози, Попутна Логістика, Аукціони Auto1 & Copart</title>
     <meta name="title" content="A-TRANS — Доставка авто з Європи | Автовози, Попутна Логістика, Аукціони Auto1 & Copart" />
     <meta name="description" content="Офіційний ліцензований перевізник A-TRANS. Попутна доставка авто з Німеччини, Польщі, Бельгії та всієї Європи в Україну за поміркованими цінами. Викуп авто з аукціонів Auto1, Copart з економією від 15%. Телефонуйте: +380 (63) 487-27-45." />
-    <meta name="keywords" content="доставка авто з європи, автовоз європа україна, пригнати авто з німеччини, попутний евакуатор україна, викуп авто auto1 copart, розмитнення авто львів, доставка машин польща україна" />
+    <meta name="keywords" content="доставка авто з європи, доставка авто з німеччини, доставка авто з польщі, автовоз європа україна, пригнати авто з німеччини, попутна логістика, викуп auto1, copart, розмитнення авто львів" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <link rel="canonical" href="https://atrans.lviv.ua/" />
 
@@ -31,6 +31,62 @@
     <meta name="twitter:title" content="A-TRANS — Доставка авто з Європи | Офіційний Перевізник" />
     <meta name="twitter:description" content="Попутна доставка авто з Європи за поміркованими цінами. Викуп з аукціонів Auto1 & Copart з вигодою від 15%." />
     <meta name="twitter:image" content="https://atrans.lviv.ua/logo_wide.png" />
+
+    <!-- ================================================================= -->
+    <!-- GOOGLE ANALYTICS 4 (GA4) & GOOGLE ADS CONVERSION TRACKING         -->
+    <!-- REPLACE 'G-XXXXXXXXXX' WITH YOUR GA4 MEASUREMENT ID              -->
+    <!-- REPLACE 'AW-XXXXXXXXX' WITH YOUR GOOGLE ADS CONVERSION ID         -->
+    <!-- ================================================================= -->
+    <script>
+      window.GA_MEASUREMENT_ID = 'G-XXXXXXXXXX'; // <-- ЗАМІНІТЬ НА ВАШ GA4 ID (наприклад G-ABC1234567)
+      window.GADS_CONVERSION_ID = 'AW-XXXXXXXXX'; // <-- ЗАМІНІТЬ НА ВАШ GOOGLE ADS ID (наприклад AW-123456789)
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      if (window.GA_MEASUREMENT_ID && window.GA_MEASUREMENT_ID !== 'G-XXXXXXXXXX') {
+        gtag('config', window.GA_MEASUREMENT_ID, { send_page_view: true });
+      }
+      if (window.GADS_CONVERSION_ID && window.GADS_CONVERSION_ID !== 'AW-XXXXXXXXX') {
+        gtag('config', window.GADS_CONVERSION_ID);
+      }
+
+      // Tracking helper for contact channel clicks
+      window.trackContactClick = function(channel) {
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'contact_click', {
+            event_category: 'engagement',
+            event_label: channel,
+            channel: channel
+          });
+          if (window.GADS_CONVERSION_ID && window.GADS_CONVERSION_ID !== 'AW-XXXXXXXXX') {
+            window.gtag('event', 'conversion', {
+              send_to: window.GADS_CONVERSION_ID,
+              event_category: 'contact_click',
+              event_label: channel
+            });
+          }
+        }
+      };
+
+      // Tracking helper for lead generation / calculator actions
+      window.trackGenerateLead = function(formName) {
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'generate_lead', {
+            event_category: 'lead',
+            event_label: formName || 'hero_calculator'
+          });
+          if (window.GADS_CONVERSION_ID && window.GADS_CONVERSION_ID !== 'AW-XXXXXXXXX') {
+            window.gtag('event', 'conversion', {
+              send_to: window.GADS_CONVERSION_ID,
+              event_category: 'generate_lead'
+            });
+          }
+        }
+      };
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 
     <!-- Structured Data / Schema.org JSON-LD -->
     <script type="application/ld+json">

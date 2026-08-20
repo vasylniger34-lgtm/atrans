@@ -30,10 +30,10 @@ export default function Header() {
           <a href="#faq" onClick={() => setMobileMenuOpen(false)}>FAQ</a>
           <a href="#contacts" onClick={() => setMobileMenuOpen(false)}>Контакти</a>
           <div className="mobile-phones">
-            <a href="tel:+380634872745" className="phone-button">
+            <a href="tel:+380634872745" className="phone-button" onClick={() => window.trackContactClick && window.trackContactClick('phone')}>
               <Phone size={16} /> <span>+380 63 487 27 45</span>
             </a>
-            <a href="tel:+380968132137" className="phone-button outline">
+            <a href="tel:+380968132137" className="phone-button outline" onClick={() => window.trackContactClick && window.trackContactClick('phone')}>
               <Phone size={16} /> <span>+380 96 813 21 37</span>
             </a>
           </div>
@@ -41,10 +41,10 @@ export default function Header() {
 
         <div className="header-actions">
           <div className="phone-group desktop-phones">
-            <a href="tel:+380634872745" className="phone-button">
+            <a href="tel:+380634872745" className="phone-button" onClick={() => window.trackContactClick && window.trackContactClick('phone')}>
               <Phone size={16} /> <span className="phone-text">+380 63 487 27 45</span>
             </a>
-            <a href="tel:+380968132137" className="phone-button outline">
+            <a href="tel:+380968132137" className="phone-button outline" onClick={() => window.trackContactClick && window.trackContactClick('phone')}>
               <Phone size={16} /> <span className="phone-text">+380 96 813 21 37</span>
             </a>
           </div>
