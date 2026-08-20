@@ -678,11 +678,6 @@ export const DESTINATIONS = [
 
 export const UKRAINE_DESTINATIONS = [
   {
-    "id": "ua_lviv",
-    "name": "Львів",
-    "surcharge": 0
-  },
-  {
     "id": "ua_vinnytsia",
     "name": "Вінниця",
     "surcharge": 200
@@ -716,6 +711,16 @@ export const UKRAINE_DESTINATIONS = [
     "id": "ua_kropyvnytskyi",
     "name": "Кропивницький",
     "surcharge": 350
+  },
+  {
+    "id": "ua_lutsk",
+    "name": "Луцьк",
+    "surcharge": 0
+  },
+  {
+    "id": "ua_lviv",
+    "name": "Львів",
+    "surcharge": 0
   },
   {
     "id": "ua_mykolaiv",
