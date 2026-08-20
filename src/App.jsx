@@ -5,6 +5,7 @@ import Loader from './components/Loader';
 import HeroCalculator from './components/HeroCalculator';
 import ContentSection, { ServicesSection, AboutSection, ContactsSection } from './components/ContentSection';
 import WorksGallery from './components/WorksGallery';
+import FAQSection from './components/FAQSection';
 
 function App() {
   const [isAnimating, setIsAnimating] = useState(true);
@@ -34,6 +35,7 @@ function App() {
         </div>
         <WorksGallery />
         <div className="content-wrapper">
+          <FAQSection />
           <ContactsSection />
         </div>
       </main>

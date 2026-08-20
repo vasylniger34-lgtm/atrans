@@ -27,6 +27,7 @@ export default function Header() {
           <a href="#services" onClick={() => setMobileMenuOpen(false)}>Послуги</a>
           <a href="#about" onClick={() => setMobileMenuOpen(false)}>Чому ми</a>
           <a href="#works" onClick={() => setMobileMenuOpen(false)}>Наші роботи</a>
+          <a href="#faq" onClick={() => setMobileMenuOpen(false)}>FAQ</a>
           <a href="#contacts" onClick={() => setMobileMenuOpen(false)}>Контакти</a>
           <div className="mobile-phones">
             <a href="tel:+380634872745" className="phone-button">
