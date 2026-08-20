@@ -87,7 +87,7 @@ export default function HeroCalculator() {
               <select value={ukraineCityId} onChange={(e) => setUkraineCityId(e.target.value)}>
                 {UKRAINE_DESTINATIONS.map(city => (
                   <option key={city.id} value={city.id}>
-                    Україна, {city.name}
+                    {city.name}
                   </option>
                 ))}
               </select>
