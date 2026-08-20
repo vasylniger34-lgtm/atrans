@@ -676,12 +676,40 @@ export const DESTINATIONS = [
   }
 ];
 
-export const calculatePrice = (countryId, groupId, weightId) => {
+export const UKRAINE_DESTINATIONS = [
+  { id: 'ua_lviv', name: 'Львів', surcharge: 0 },
+  { id: 'ua_vinnytsia', name: 'Вінниця', surcharge: 200 },
+  { id: 'ua_dnipro', name: 'Дніпро', surcharge: 350 },
+  { id: 'ua_zhytomyr', name: 'Житомир', surcharge: 200 },
+  { id: 'ua_zaporizhzhia', name: 'Запоріжжя', surcharge: 400 },
+  { id: 'ua_ivano_frankivsk', name: 'Івано-Франківськ', surcharge: 100 },
+  { id: 'ua_kyiv', name: 'Київ', surcharge: 230 },
+  { id: 'ua_kropyvnytskyi', name: 'Кропивницький', surcharge: 350 },
+  { id: 'ua_mykolaiv', name: 'Миколаїв', surcharge: 400 },
+  { id: 'ua_odesa', name: 'Одеса', surcharge: 350 },
+  { id: 'ua_poltava', name: 'Полтава', surcharge: 350 },
+  { id: 'ua_rivne', name: 'Рівне', surcharge: 100 },
+  { id: 'ua_sumy', name: 'Суми', surcharge: 400 },
+  { id: 'ua_ternopil', name: 'Тернопіль', surcharge: 100 },
+  { id: 'ua_uman', name: 'Умань', surcharge: 350 },
+  { id: 'ua_kharkiv', name: 'Харків', surcharge: 400 },
+  { id: 'ua_khmelnytskyi', name: 'Хмельницький', surcharge: 200 },
+  { id: 'ua_cherkasy', name: 'Черкаси', surcharge: 350 },
+  { id: 'ua_chernihiv', name: 'Чернігів', surcharge: 400 }
+];
+
+export const calculatePrice = (countryId, groupId, weightId, ukraineCityId = 'ua_lviv') => {
   const country = DESTINATIONS.find(c => c.countryId === countryId);
   if (!country) return 0;
   
   const group = country.groups.find(g => g.id === groupId);
   if (!group) return 0;
   
-  return group.prices[weightId] || 0;
+  const basePrice = group.prices[weightId] || 0;
+  if (!basePrice) return 0;
+
+  const ukrCity = UKRAINE_DESTINATIONS.find(u => u.id === ukraineCityId);
+  const surcharge = ukrCity ? ukrCity.surcharge : 0;
+
+  return basePrice + surcharge;
 };

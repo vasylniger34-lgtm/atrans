@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { DESTINATIONS, WEIGHT_CATEGORIES, calculatePrice } from '../data';
+import { DESTINATIONS, WEIGHT_CATEGORIES, UKRAINE_DESTINATIONS, calculatePrice } from '../data';
 import { Calculator, MapPin, Scale, PhoneForwarded, Globe, Navigation } from 'lucide-react';
 import { motion } from 'framer-motion';
 import './HeroCalculator.css';
@@ -8,6 +8,7 @@ export default function HeroCalculator() {
   const [countryId, setCountryId] = useState(DESTINATIONS[0].countryId);
   const [groupId, setGroupId] = useState(DESTINATIONS[0].groups[0].id);
   const [weightId, setWeightId] = useState(WEIGHT_CATEGORIES[0].id);
+  const [ukraineCityId, setUkraineCityId] = useState(UKRAINE_DESTINATIONS[0].id);
 
   const activeCountry = DESTINATIONS.find(c => c.countryId === countryId);
 
@@ -18,7 +19,7 @@ export default function HeroCalculator() {
     }
   }, [countryId, activeCountry, groupId]);
 
-  const price = calculatePrice(countryId, groupId, weightId);
+  const price = calculatePrice(countryId, groupId, weightId, ukraineCityId);
 
   return (
     <section className="hero-section" id="home">
@@ -82,9 +83,13 @@ export default function HeroCalculator() {
             </div>
 
             <div className="form-group full-width">
-              <label><MapPin size={16}/> Місто доставки:</label>
-              <select disabled>
-                <option>Україна, Львів</option>
+              <label><MapPin size={16}/> Місто доставки в Україні:</label>
+              <select value={ukraineCityId} onChange={(e) => setUkraineCityId(e.target.value)}>
+                {UKRAINE_DESTINATIONS.map(city => (
+                  <option key={city.id} value={city.id}>
+                    Україна, {city.name} {city.surcharge > 0 ? `(+€${city.surcharge})` : ''}
+                  </option>
+                ))}
               </select>
             </div>
           </div>
