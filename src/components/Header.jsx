@@ -24,7 +24,8 @@ export default function Header() {
         
         <nav className={`desktop-nav ${mobileMenuOpen ? 'mobile-open' : ''}`}>
           <a href="#home" onClick={() => setMobileMenuOpen(false)}>Головна</a>
-          <a href="#about" onClick={() => setMobileMenuOpen(false)}>Про нас</a>
+          <a href="#services" onClick={() => setMobileMenuOpen(false)}>Послуги</a>
+          <a href="#about" onClick={() => setMobileMenuOpen(false)}>Чому ми</a>
           <a href="#works" onClick={() => setMobileMenuOpen(false)}>Наші роботи</a>
           <a href="#contacts" onClick={() => setMobileMenuOpen(false)}>Контакти</a>
           <div className="mobile-phones">

@@ -1,7 +1,114 @@
 import React from 'react';
-import { Route, ShieldCheck, Clock, FileCheck, PhoneForwarded, MapPin } from 'lucide-react';
+import { 
+  ShieldCheck, 
+  Clock, 
+  FileCheck, 
+  PhoneForwarded, 
+  MapPin, 
+  Truck, 
+  ShoppingBag, 
+  Search, 
+  Headphones, 
+  Percent, 
+  Award, 
+  DollarSign 
+} from 'lucide-react';
 import { motion } from 'framer-motion';
 import './ContentSection.css';
+
+export function ServicesSection() {
+  return (
+    <section className="services-section" id="services">
+      <motion.div 
+        className="section-header center"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+      >
+        <div className="official-badge">
+          <Award size={16} /> Офіційний та ліцензований перевізник
+        </div>
+        <h2>Послуги A-TRANS</h2>
+        <p>Міжнародна логістика авто з Європи, купівля з аукціонів та попутні перевезення по Україні.</p>
+      </motion.div>
+
+      {/* Featured Auction VIP Service */}
+      <motion.div 
+        className="featured-service-card glass"
+        initial={{ opacity: 0, y: 25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <div className="featured-badge">Окрема важлива послуга</div>
+        <div className="featured-content">
+          <div className="featured-info">
+            <div className="featured-title-row">
+              <ShoppingBag className="featured-icon" />
+              <div>
+                <h3>Купівля авто під ключ з європейських аукціонів</h3>
+                <span className="auction-platforms">Auto 1, Copart (EU) та інші провідні майданчики</span>
+              </div>
+            </div>
+            <p>
+              Організовуємо повний цикл купівлі автомобіля на європейських аукціонах.
+              Ви отримуєте перевірене авто з прозорою історією та повною доставкою під ключ.
+            </p>
+          </div>
+          <div className="featured-highlight">
+            <div className="savings-badge">
+              <Percent size={26} />
+              <div>
+                <strong>Економія від 15%</strong>
+                <span>від ринкової вартості в Україні</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Services Grid */}
+      <div className="services-grid">
+        <div className="service-card glass">
+          <Truck className="service-icon" />
+          <h3>Доставка авто з Європи</h3>
+          <p>Доставка автовозами та евакуаторами. Будуємо грамотну попутну логістику для забезпечення найвигідніших та поміркованих цін.</p>
+        </div>
+
+        <div className="service-card glass">
+          <Truck className="service-icon" />
+          <h3>Попутні перевезення по Україні</h3>
+          <p>Швидка та бюджетна доставка автомобілів між містами України попутними евакуаторами без переплати за порожній пробіг.</p>
+        </div>
+
+        <div className="service-card glass">
+          <Search className="service-icon" />
+          <h3>Допомога в підборі та купівлі</h3>
+          <p>Професійний пошук та підбір автомобіля під ваші параметри й бюджет на ринках Євросоюзу.</p>
+        </div>
+
+        <div className="service-card glass">
+          <FileCheck className="service-icon" />
+          <h3>Передкупівельний огляд авто</h3>
+          <p>Детальна передкупівельна діагностика технічного стану, кузова, комплектації та документів на місці.</p>
+        </div>
+
+        <div className="service-card glass">
+          <ShieldCheck className="service-icon" />
+          <h3>Допомога в митному оформленні</h3>
+          <p>Повний супровід та допомога з брокерськими послугами для швидкого та легального розмитнення.</p>
+        </div>
+
+        <div className="service-card glass">
+          <Headphones className="service-icon" />
+          <h3>Супровід та підтримка 24/7</h3>
+          <p>Персональний менеджер цілодобово на зв'язку. Інформуємо про кожен етап від покупки до передачі ключів.</p>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export function AboutSection() {
   return (
@@ -13,46 +120,45 @@ export function AboutSection() {
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6 }}
       >
-        <h2>Про нас</h2>
-        <p>Ваш надійний партнер у сфері міжнародної логістики авто.</p>
+        <h2>Чому обирають A-TRANS?</h2>
+        <p>Офіційний ліцензований перевізник із розумною попутною логістикою.</p>
       </motion.div>
       
       <div className="about-content glass">
         <div className="about-text">
-          <h3>Чому обирають A-TRANS?</h3>
           <ul className="about-list">
             <li>
-              <Clock className="a-icon" />
+              <DollarSign className="a-icon" />
               <div>
-                <h4>Регулярні рейси</h4>
-                <p>Ми здійснюємо регулярні щотижневі рейси з країн Євросоюзу.</p>
+                <h4>Помірні та прийнятні ціни</h4>
+                <p>Основна перевага, за яку нас обирають! Ми будуємо логістику так, щоб завантаження відбувалось попутно, що знижує підсумкову вартість доставки.</p>
               </div>
             </li>
             <li>
-              <FileCheck className="a-icon" />
+              <Award className="a-icon" />
               <div>
-                <h4>Фіксована ціна</h4>
-                <p>Фіксована узгоджена ціна без прихованих доплат та комісій.</p>
+                <h4>Офіційний та ліцензований перевізник</h4>
+                <p>Офіційна ліцензія на міжнародні перевезення, страхування вантажу та прозорий договір з фіксованою ціною.</p>
               </div>
             </li>
             <li>
-              <ShieldCheck className="a-icon" />
+              <Percent className="a-icon" />
               <div>
-                <h4>Митне оформлення</h4>
-                <p>Допомога з митним оформленням та супровід документів.</p>
+                <h4>Вигода від 15% на аукціонах</h4>
+                <p>Окрема послуга викупу авто під ключ з майданчиків Auto 1 та Copart з економно від 15% від цін в Україні.</p>
               </div>
             </li>
             <li>
-              <PhoneForwarded className="a-icon" />
+              <Headphones className="a-icon" />
               <div>
-                <h4>Цілодобова підтримка</h4>
-                <p>Наші менеджери на зв'язку 24/7 для вашого спокою.</p>
+                <h4>24/7 На зв'язку</h4>
+                <p>Наші менеджери цілодобово інформують про місцезнаходження вашого авто та готові відповісти на будь-які питання.</p>
               </div>
             </li>
           </ul>
         </div>
         <div className="about-image">
-           <img src="/iveco.png" alt="Logistics" />
+           <img src="/iveco.png" alt="A-TRANS Auto Transporter" />
         </div>
       </div>
     </section>

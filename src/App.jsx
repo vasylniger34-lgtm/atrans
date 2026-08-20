@@ -3,7 +3,7 @@ import { AnimatePresence } from 'framer-motion';
 import Header from './components/Header';
 import Loader from './components/Loader';
 import HeroCalculator from './components/HeroCalculator';
-import ContentSection, { AboutSection, ContactsSection } from './components/ContentSection';
+import ContentSection, { ServicesSection, AboutSection, ContactsSection } from './components/ContentSection';
 import WorksGallery from './components/WorksGallery';
 
 function App() {
@@ -29,6 +29,7 @@ function App() {
       <main>
         <HeroCalculator />
         <div className="content-wrapper">
+          <ServicesSection />
           <AboutSection />
         </div>
         <WorksGallery />
