@@ -1,8 +1,48 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { DESTINATIONS, WEIGHT_CATEGORIES, UKRAINE_DESTINATIONS, calculatePrice } from '../data';
 import { Calculator, MapPin, Scale, PhoneForwarded, Globe, Navigation } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, animate } from 'framer-motion';
 import './HeroCalculator.css';
+
+function AnimatedPrice({ value }) {
+  const [displayValue, setDisplayValue] = useState(value);
+  const [isCounting, setIsCounting] = useState(false);
+  const prevValueRef = useRef(value);
+
+  useEffect(() => {
+    if (prevValueRef.current === value) {
+      setDisplayValue(value);
+      return;
+    }
+
+    const startVal = prevValueRef.current;
+    prevValueRef.current = value;
+    setIsCounting(true);
+
+    const controls = animate(startVal, value, {
+      duration: 0.65,
+      ease: [0.16, 1, 0.3, 1],
+      onUpdate: (latest) => {
+        setDisplayValue(Math.round(latest));
+      },
+      onComplete: () => {
+        setIsCounting(false);
+      }
+    });
+
+    return () => controls.stop();
+  }, [value]);
+
+  return (
+    <motion.strong 
+      animate={{ scale: isCounting ? [1, 1.08, 1] : 1 }}
+      transition={{ duration: 0.4 }}
+      className={`animated-price-value ${isCounting ? 'counting' : ''}`}
+    >
+      {displayValue > 0 ? `≈ €${displayValue}` : '---'}
+    </motion.strong>
+  );
+}
 
 export default function HeroCalculator() {
   const [countryId, setCountryId] = useState(DESTINATIONS[0].countryId);
@@ -97,7 +137,7 @@ export default function HeroCalculator() {
           <div className="calc-footer">
             <div className="price-display">
               Орієнтовна вартість:
-              <strong>{price > 0 ? `≈ €${price}` : '---'}</strong>
+              <AnimatedPrice value={price} />
             </div>
             <a 
               href="tel:+380634872745" 
