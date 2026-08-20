@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { DESTINATIONS, WEIGHT_CATEGORIES, UKRAINE_DESTINATIONS, calculatePrice } from '../data';
-import { Calculator, MapPin, Scale, PhoneForwarded, Globe, Navigation } from 'lucide-react';
-import { motion, animate } from 'framer-motion';
+import { Calculator, MapPin, Scale, PhoneForwarded, Globe, Navigation, ChevronDown, Phone } from 'lucide-react';
+import { motion, animate, AnimatePresence } from 'framer-motion';
 import './HeroCalculator.css';
 
 function AnimatedPrice({ value }) {
@@ -49,6 +49,7 @@ export default function HeroCalculator() {
   const [groupId, setGroupId] = useState(DESTINATIONS[0].groups[0].id);
   const [weightId, setWeightId] = useState(WEIGHT_CATEGORIES[0].id);
   const [ukraineCityId, setUkraineCityId] = useState(UKRAINE_DESTINATIONS[0].id);
+  const [showPhonePopup, setShowPhonePopup] = useState(false);
 
   const activeCountry = DESTINATIONS.find(c => c.countryId === countryId);
 
@@ -139,13 +140,52 @@ export default function HeroCalculator() {
               Орієнтовна вартість:
               <AnimatedPrice value={price} />
             </div>
-            <a 
-              href="tel:+380634872745" 
-              className="cta-button primary"
-              onClick={() => window.trackContactClick && window.trackContactClick('phone')}
-            >
-              <PhoneForwarded size={18} /> Зателефонувати
-            </a>
+            <div className="phone-dropdown-wrapper">
+              <button 
+                type="button"
+                className={`cta-button primary ${showPhonePopup ? 'active' : ''}`}
+                onClick={() => setShowPhonePopup(!showPhonePopup)}
+              >
+                <PhoneForwarded size={18} /> Зателефонувати
+                <ChevronDown size={16} className={`phone-chevron ${showPhonePopup ? 'open' : ''}`} />
+              </button>
+
+              <AnimatePresence>
+                {showPhonePopup && (
+                  <motion.div 
+                    className="phone-popup glass"
+                    initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                    transition={{ duration: 0.25, ease: "easeOut" }}
+                  >
+                    <span className="phone-popup-title">Оберіть номер для дзвінка:</span>
+                    <a 
+                      href="tel:+380634872745" 
+                      className="phone-option-btn"
+                      onClick={() => {
+                        if (window.trackContactClick) window.trackContactClick('phone');
+                        setShowPhonePopup(false);
+                      }}
+                    >
+                      <Phone size={16} />
+                      <span>+380 63 487 27 45</span>
+                    </a>
+                    <a 
+                      href="tel:+380968132137" 
+                      className="phone-option-btn"
+                      onClick={() => {
+                        if (window.trackContactClick) window.trackContactClick('phone');
+                        setShowPhonePopup(false);
+                      }}
+                    >
+                      <Phone size={16} />
+                      <span>+380 96 813 21 37</span>
+                    </a>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
           </div>
 
           <div className="calc-messengers">

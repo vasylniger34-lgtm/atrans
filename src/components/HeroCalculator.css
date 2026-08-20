@@ -225,6 +225,77 @@ select:disabled {
   text-shadow: 0 0 20px rgba(212, 175, 55, 0.9), 0 0 35px rgba(212, 175, 55, 0.6);
 }
 
+/* Phone Dropdown Popup */
+.phone-dropdown-wrapper {
+  position: relative;
+}
+
+.phone-chevron {
+  transition: transform 0.3s ease;
+  margin-left: 6px;
+}
+
+.phone-chevron.open {
+  transform: rotate(180deg);
+}
+
+.phone-popup {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 250px;
+  padding: 16px;
+  border-radius: 16px;
+  background: rgba(18, 18, 22, 0.96);
+  border: 1px solid var(--accent-color);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(212, 175, 55, 0.2);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  backdrop-filter: blur(12px);
+}
+
+.phone-popup-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.phone-option-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: var(--accent-light);
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  transition: all var(--transition);
+}
+
+.phone-option-btn svg {
+  color: var(--accent-color);
+  flex-shrink: 0;
+}
+
+.phone-option-btn:hover {
+  background: var(--accent-color);
+  color: #060606;
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.3);
+}
+
+.phone-option-btn:hover svg {
+  color: #060606;
+}
+
 /* Messengers Section under CTA */
 .calc-messengers {
   margin-top: 20px;
