@@ -6,84 +6,6 @@ export const WEIGHT_CATEGORIES = [
 
 export const DESTINATIONS = [
   {
-    "countryId": "BE",
-    "countryName": "Бельгія",
-    "groups": [
-      {
-        "id": "be_g1_3",
-        "name": "Антверпен",
-        "prices": {
-          "w1": 1000,
-          "w2": 1100,
-          "w3": 1300
-        }
-      },
-      {
-        "id": "be_g1_0",
-        "name": "Брюгге",
-        "prices": {
-          "w1": 1000,
-          "w2": 1100,
-          "w3": 1300
-        }
-      },
-      {
-        "id": "be_g1_4",
-        "name": "Брюссель",
-        "prices": {
-          "w1": 1000,
-          "w2": 1100,
-          "w3": 1300
-        }
-      },
-      {
-        "id": "be_g1_1",
-        "name": "Гент",
-        "prices": {
-          "w1": 1000,
-          "w2": 1100,
-          "w3": 1300
-        }
-      },
-      {
-        "id": "be_g1_2",
-        "name": "Кортрейк",
-        "prices": {
-          "w1": 1000,
-          "w2": 1100,
-          "w3": 1300
-        }
-      },
-      {
-        "id": "be_g2_1",
-        "name": "Льєж",
-        "prices": {
-          "w1": 970,
-          "w2": 1020,
-          "w3": 1300
-        }
-      },
-      {
-        "id": "be_g2_0",
-        "name": "Хасселт",
-        "prices": {
-          "w1": 970,
-          "w2": 1020,
-          "w3": 1300
-        }
-      },
-      {
-        "id": "be_g1_5",
-        "name": "Шарлеруа",
-        "prices": {
-          "w1": 1000,
-          "w2": 1100,
-          "w3": 1300
-        }
-      }
-    ]
-  },
-  {
     "countryId": "DE",
     "countryName": "Німеччина",
     "groups": [
@@ -175,6 +97,225 @@ export const DESTINATIONS = [
           "w1": 800,
           "w2": 850,
           "w3": 1000
+        }
+      }
+    ]
+  },
+  {
+    "countryId": "PL",
+    "countryName": "Польща",
+    "groups": [
+      {
+        "id": "pl_g1_3",
+        "name": "Бидгощ",
+        "prices": {
+          "w1": 670,
+          "w2": 720,
+          "w3": 800
+        }
+      },
+      {
+        "id": "pl_g2_3",
+        "name": "Варшава",
+        "prices": {
+          "w1": 500,
+          "w2": 550,
+          "w3": 700
+        }
+      },
+      {
+        "id": "pl_g2_1",
+        "name": "Вроцлав",
+        "prices": {
+          "w1": 500,
+          "w2": 550,
+          "w3": 700
+        }
+      },
+      {
+        "id": "pl_g1_1",
+        "name": "Гданськ",
+        "prices": {
+          "w1": 670,
+          "w2": 720,
+          "w3": 800
+        }
+      },
+      {
+        "id": "pl_g1_0",
+        "name": "Гдиня",
+        "prices": {
+          "w1": 670,
+          "w2": 720,
+          "w3": 800
+        }
+      },
+      {
+        "id": "pl_rzeszow",
+        "name": "Жешув",
+        "prices": {
+          "w1": 200,
+          "w2": 250,
+          "w3": 400
+        }
+      },
+      {
+        "id": "pl_g3_0",
+        "name": "Катовіце",
+        "prices": {
+          "w1": 450,
+          "w2": 500,
+          "w3": 650
+        }
+      },
+      {
+        "id": "pl_kielce",
+        "name": "Кельце",
+        "prices": {
+          "w1": 400,
+          "w2": 450,
+          "w3": 600
+        }
+      },
+      {
+        "id": "pl_g4_0",
+        "name": "Краків",
+        "prices": {
+          "w1": 400,
+          "w2": 450,
+          "w3": 600
+        }
+      },
+      {
+        "id": "pl_g2_2",
+        "name": "Лодзь",
+        "prices": {
+          "w1": 500,
+          "w2": 550,
+          "w3": 650
+        }
+      },
+      {
+        "id": "pl_g4_1",
+        "name": "Люблін",
+        "prices": {
+          "w1": 400,
+          "w2": 450,
+          "w3": 550
+        }
+      },
+      {
+        "id": "pl_g5_0",
+        "name": "Перемишль",
+        "prices": {
+          "w1": 200,
+          "w2": 250,
+          "w3": 350
+        }
+      },
+      {
+        "id": "pl_g2_0",
+        "name": "Познань",
+        "prices": {
+          "w1": 550,
+          "w2": 600,
+          "w3": 700
+        }
+      },
+      {
+        "id": "pl_radom",
+        "name": "Радом",
+        "prices": {
+          "w1": 400,
+          "w2": 450,
+          "w3": 600
+        }
+      },
+      {
+        "id": "pl_g1_2",
+        "name": "Щецин",
+        "prices": {
+          "w1": 700,
+          "w2": 750,
+          "w3": 900
+        }
+      }
+    ]
+  },
+  {
+    "countryId": "BE",
+    "countryName": "Бельгія",
+    "groups": [
+      {
+        "id": "be_g1_3",
+        "name": "Антверпен",
+        "prices": {
+          "w1": 1000,
+          "w2": 1100,
+          "w3": 1300
+        }
+      },
+      {
+        "id": "be_g1_0",
+        "name": "Брюгге",
+        "prices": {
+          "w1": 1000,
+          "w2": 1100,
+          "w3": 1300
+        }
+      },
+      {
+        "id": "be_g1_4",
+        "name": "Брюссель",
+        "prices": {
+          "w1": 1000,
+          "w2": 1100,
+          "w3": 1300
+        }
+      },
+      {
+        "id": "be_g1_1",
+        "name": "Гент",
+        "prices": {
+          "w1": 1000,
+          "w2": 1100,
+          "w3": 1300
+        }
+      },
+      {
+        "id": "be_g1_2",
+        "name": "Кортрейк",
+        "prices": {
+          "w1": 1000,
+          "w2": 1100,
+          "w3": 1300
+        }
+      },
+      {
+        "id": "be_g2_1",
+        "name": "Льєж",
+        "prices": {
+          "w1": 970,
+          "w2": 1020,
+          "w3": 1300
+        }
+      },
+      {
+        "id": "be_g2_0",
+        "name": "Хасселт",
+        "prices": {
+          "w1": 970,
+          "w2": 1020,
+          "w3": 1300
+        }
+      },
+      {
+        "id": "be_g1_5",
+        "name": "Шарлеруа",
+        "prices": {
+          "w1": 1000,
+          "w2": 1100,
+          "w3": 1300
         }
       }
     ]
@@ -532,170 +673,105 @@ export const DESTINATIONS = [
         }
       }
     ]
-  },
-  {
-    "countryId": "PL",
-    "countryName": "Польща",
-    "groups": [
-      {
-        "id": "pl_g1_3",
-        "name": "Бидгощ",
-        "prices": {
-          "w1": 670,
-          "w2": 720,
-          "w3": 800
-        }
-      },
-      {
-        "id": "pl_g2_3",
-        "name": "Варшава",
-        "prices": {
-          "w1": 500,
-          "w2": 550,
-          "w3": 700
-        }
-      },
-      {
-        "id": "pl_g2_1",
-        "name": "Вроцлав",
-        "prices": {
-          "w1": 500,
-          "w2": 550,
-          "w3": 700
-        }
-      },
-      {
-        "id": "pl_g1_1",
-        "name": "Гданськ",
-        "prices": {
-          "w1": 670,
-          "w2": 720,
-          "w3": 800
-        }
-      },
-      {
-        "id": "pl_g1_0",
-        "name": "Гдиня",
-        "prices": {
-          "w1": 670,
-          "w2": 720,
-          "w3": 800
-        }
-      },
-      {
-        "id": "pl_rzeszow",
-        "name": "Жешув",
-        "prices": {
-          "w1": 200,
-          "w2": 250,
-          "w3": 400
-        }
-      },
-      {
-        "id": "pl_g3_0",
-        "name": "Катовіце",
-        "prices": {
-          "w1": 450,
-          "w2": 500,
-          "w3": 650
-        }
-      },
-      {
-        "id": "pl_kielce",
-        "name": "Кельце",
-        "prices": {
-          "w1": 400,
-          "w2": 450,
-          "w3": 600
-        }
-      },
-      {
-        "id": "pl_g4_0",
-        "name": "Краків",
-        "prices": {
-          "w1": 400,
-          "w2": 450,
-          "w3": 600
-        }
-      },
-      {
-        "id": "pl_g2_2",
-        "name": "Лодзь",
-        "prices": {
-          "w1": 500,
-          "w2": 550,
-          "w3": 650
-        }
-      },
-      {
-        "id": "pl_g4_1",
-        "name": "Люблін",
-        "prices": {
-          "w1": 400,
-          "w2": 450,
-          "w3": 550
-        }
-      },
-      {
-        "id": "pl_g5_0",
-        "name": "Перемишль",
-        "prices": {
-          "w1": 200,
-          "w2": 250,
-          "w3": 350
-        }
-      },
-      {
-        "id": "pl_g2_0",
-        "name": "Познань",
-        "prices": {
-          "w1": 550,
-          "w2": 600,
-          "w3": 700
-        }
-      },
-      {
-        "id": "pl_radom",
-        "name": "Радом",
-        "prices": {
-          "w1": 400,
-          "w2": 450,
-          "w3": 600
-        }
-      },
-      {
-        "id": "pl_g1_2",
-        "name": "Щецин",
-        "prices": {
-          "w1": 700,
-          "w2": 750,
-          "w3": 900
-        }
-      }
-    ]
   }
 ];
 
 export const UKRAINE_DESTINATIONS = [
-  { id: 'ua_lviv', name: 'Львів', surcharge: 0 },
-  { id: 'ua_vinnytsia', name: 'Вінниця', surcharge: 200 },
-  { id: 'ua_dnipro', name: 'Дніпро', surcharge: 350 },
-  { id: 'ua_zhytomyr', name: 'Житомир', surcharge: 200 },
-  { id: 'ua_zaporizhzhia', name: 'Запоріжжя', surcharge: 400 },
-  { id: 'ua_ivano_frankivsk', name: 'Івано-Франківськ', surcharge: 100 },
-  { id: 'ua_kyiv', name: 'Київ', surcharge: 230 },
-  { id: 'ua_kropyvnytskyi', name: 'Кропивницький', surcharge: 350 },
-  { id: 'ua_mykolaiv', name: 'Миколаїв', surcharge: 400 },
-  { id: 'ua_odesa', name: 'Одеса', surcharge: 350 },
-  { id: 'ua_poltava', name: 'Полтава', surcharge: 350 },
-  { id: 'ua_rivne', name: 'Рівне', surcharge: 100 },
-  { id: 'ua_sumy', name: 'Суми', surcharge: 400 },
-  { id: 'ua_ternopil', name: 'Тернопіль', surcharge: 100 },
-  { id: 'ua_uman', name: 'Умань', surcharge: 350 },
-  { id: 'ua_kharkiv', name: 'Харків', surcharge: 400 },
-  { id: 'ua_khmelnytskyi', name: 'Хмельницький', surcharge: 200 },
-  { id: 'ua_cherkasy', name: 'Черкаси', surcharge: 350 },
-  { id: 'ua_chernihiv', name: 'Чернігів', surcharge: 400 }
+  {
+    "id": "ua_lviv",
+    "name": "Львів",
+    "surcharge": 0
+  },
+  {
+    "id": "ua_vinnytsia",
+    "name": "Вінниця",
+    "surcharge": 200
+  },
+  {
+    "id": "ua_dnipro",
+    "name": "Дніпро",
+    "surcharge": 350
+  },
+  {
+    "id": "ua_zhytomyr",
+    "name": "Житомир",
+    "surcharge": 200
+  },
+  {
+    "id": "ua_zaporizhzhia",
+    "name": "Запоріжжя",
+    "surcharge": 400
+  },
+  {
+    "id": "ua_ivano_frankivsk",
+    "name": "Івано-Франківськ",
+    "surcharge": 100
+  },
+  {
+    "id": "ua_kyiv",
+    "name": "Київ",
+    "surcharge": 230
+  },
+  {
+    "id": "ua_kropyvnytskyi",
+    "name": "Кропивницький",
+    "surcharge": 350
+  },
+  {
+    "id": "ua_mykolaiv",
+    "name": "Миколаїв",
+    "surcharge": 400
+  },
+  {
+    "id": "ua_odesa",
+    "name": "Одеса",
+    "surcharge": 350
+  },
+  {
+    "id": "ua_poltava",
+    "name": "Полтава",
+    "surcharge": 350
+  },
+  {
+    "id": "ua_rivne",
+    "name": "Рівне",
+    "surcharge": 100
+  },
+  {
+    "id": "ua_sumy",
+    "name": "Суми",
+    "surcharge": 400
+  },
+  {
+    "id": "ua_ternopil",
+    "name": "Тернопіль",
+    "surcharge": 100
+  },
+  {
+    "id": "ua_uman",
+    "name": "Умань",
+    "surcharge": 350
+  },
+  {
+    "id": "ua_kharkiv",
+    "name": "Харків",
+    "surcharge": 400
+  },
+  {
+    "id": "ua_khmelnytskyi",
+    "name": "Хмельницький",
+    "surcharge": 200
+  },
+  {
+    "id": "ua_cherkasy",
+    "name": "Черкаси",
+    "surcharge": 350
+  },
+  {
+    "id": "ua_chernihiv",
+    "name": "Чернігів",
+    "surcharge": 400
+  }
 ];
 
 export const calculatePrice = (countryId, groupId, weightId, ukraineCityId = 'ua_lviv') => {
