@@ -215,6 +215,78 @@ select:disabled {
   margin-top: 4px;
 }
 
+/* Messengers Section under CTA */
+.calc-messengers {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.messengers-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.03em;
+}
+
+.messengers-grid {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.messenger-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  background: var(--accent-light);
+  color: var(--text-color);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  transition: all var(--transition);
+}
+
+.messenger-btn svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+.messenger-btn:hover {
+  background: var(--accent-color);
+  color: #060606;
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25);
+}
+
+.messenger-btn.telegram:hover {
+  background: #229ED9;
+  color: #ffffff;
+  border-color: #229ED9;
+}
+
+.messenger-btn.viber:hover {
+  background: #7360F2;
+  color: #ffffff;
+  border-color: #7360F2;
+}
+
+.messenger-btn.whatsapp:hover {
+  background: #25D366;
+  color: #ffffff;
+  border-color: #25D366;
+}
+
 @media (max-width: 900px) {
   .hero-section {
     padding: 100px 15px 60px;
