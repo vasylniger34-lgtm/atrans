@@ -11,7 +11,8 @@ import {
   Headphones, 
   Percent, 
   Award, 
-  DollarSign 
+  DollarSign,
+  Route 
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import './ContentSection.css';
@@ -45,7 +46,14 @@ export function ServicesSection() {
         <div className="featured-content">
           <div className="featured-info">
             <div className="featured-title-row">
-              <ShoppingBag className="featured-icon" />
+              <motion.div 
+                className="featured-icon-box"
+                animate={{ y: [0, -4, 0] }}
+                transition={{ repeat: Infinity, duration: 2.5, ease: "easeInOut" }}
+                whileHover={{ scale: 1.15, rotate: [0, -8, 8, 0] }}
+              >
+                <ShoppingBag size={26} />
+              </motion.div>
               <div>
                 <h3>Купівля авто під ключ з європейських аукціонів</h3>
                 <span className="auction-platforms">Auto 1, Copart, BCA, CarTV, Ayvens, Autobid та інші</span>
@@ -70,41 +78,107 @@ export function ServicesSection() {
 
       {/* Services Grid */}
       <div className="services-grid">
-        <div className="service-card glass">
-          <Truck className="service-icon" />
+        <motion.div 
+          className="service-card glass"
+          whileHover="hover"
+        >
+          <motion.div 
+            className="service-icon-box"
+            variants={{
+              hover: { x: [0, 8, -4, 0], y: [0, -2, 1, 0], scale: 1.1 }
+            }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
+            <Truck size={24} />
+          </motion.div>
           <h3>Доставка авто з Європи</h3>
           <p>Доставка автовозами та евакуаторами. Будуємо грамотну попутну логістику для забезпечення найвигідніших та поміркованих цін.</p>
-        </div>
+        </motion.div>
 
-        <div className="service-card glass">
-          <Truck className="service-icon" />
+        <motion.div 
+          className="service-card glass"
+          whileHover="hover"
+        >
+          <motion.div 
+            className="service-icon-box"
+            variants={{
+              hover: { x: [-5, 7, 0], scale: 1.12 }
+            }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+          >
+            <Route size={24} />
+          </motion.div>
           <h3>Попутні перевезення по Україні</h3>
           <p>Швидка та бюджетна доставка автомобілів між містами України попутними евакуаторами без переплати за порожній пробіг.</p>
-        </div>
+        </motion.div>
 
-        <div className="service-card glass">
-          <Search className="service-icon" />
+        <motion.div 
+          className="service-card glass"
+          whileHover="hover"
+        >
+          <motion.div 
+            className="service-icon-box"
+            variants={{
+              hover: { rotate: [0, -22, 22, -10, 0], scale: 1.18 }
+            }}
+            transition={{ duration: 0.6 }}
+          >
+            <Search size={24} />
+          </motion.div>
           <h3>Допомога в підборі та купівлі</h3>
           <p>Професійний пошук та підбір автомобіля під ваші параметри й бюджет на ринках Євросоюзу.</p>
-        </div>
+        </motion.div>
 
-        <div className="service-card glass">
-          <FileCheck className="service-icon" />
+        <motion.div 
+          className="service-card glass"
+          whileHover="hover"
+        >
+          <motion.div 
+            className="service-icon-box"
+            variants={{
+              hover: { scale: [1, 1.25, 0.9, 1], rotate: [0, -8, 8, 0] }
+            }}
+            transition={{ duration: 0.5 }}
+          >
+            <FileCheck size={24} />
+          </motion.div>
           <h3>Передкупівельний огляд авто</h3>
           <p>Детальна передкупівельна діагностика технічного стану, кузова, комплектації та документів на місці.</p>
-        </div>
+        </motion.div>
 
-        <div className="service-card glass">
-          <ShieldCheck className="service-icon" />
+        <motion.div 
+          className="service-card glass"
+          whileHover="hover"
+        >
+          <motion.div 
+            className="service-icon-box"
+            variants={{
+              hover: { scale: [1, 1.2, 1], rotateY: 180 }
+            }}
+            transition={{ duration: 0.6 }}
+          >
+            <ShieldCheck size={24} />
+          </motion.div>
           <h3>Допомога в митному оформленні</h3>
           <p>Повний супровід та допомога з брокерськими послугами для швидкого та легального розмитнення.</p>
-        </div>
+        </motion.div>
 
-        <div className="service-card glass">
-          <Headphones className="service-icon" />
+        <motion.div 
+          className="service-card glass"
+          whileHover="hover"
+        >
+          <motion.div 
+            className="service-icon-box"
+            variants={{
+              hover: { rotate: [-14, 14, -8, 8, 0], scale: 1.15 }
+            }}
+            transition={{ duration: 0.6 }}
+          >
+            <Headphones size={24} />
+          </motion.div>
           <h3>Супровід та підтримка 24/7</h3>
           <p>Персональний менеджер цілодобово на зв'язку. Інформуємо про кожен етап від покупки до передачі ключів.</p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
