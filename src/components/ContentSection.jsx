@@ -48,7 +48,7 @@ export function ServicesSection() {
               <ShoppingBag className="featured-icon" />
               <div>
                 <h3>Купівля авто під ключ з європейських аукціонів</h3>
-                <span className="auction-platforms">Auto 1, Copart (EU) та інші провідні майданчики</span>
+                <span className="auction-platforms">Auto 1, Copart, BCA, CarTV, Ayvens, Autobid та інші</span>
               </div>
             </div>
             <p>
@@ -145,7 +145,7 @@ export function AboutSection() {
               <Percent className="a-icon" />
               <div>
                 <h4>Вигода від 15% на аукціонах</h4>
-                <p>Окрема послуга викупу авто під ключ з майданчиків Auto 1 та Copart з економно від 15% від цін в Україні.</p>
+                <p>Викуп авто під ключ з майданчиків Auto 1, Copart, BCA, CarTV, Ayvens, Autobid з економією від 15% від цін в Україні.</p>
               </div>
             </li>
             <li>
