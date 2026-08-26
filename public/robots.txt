@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://atrans.lviv.ua/sitemap.xml
+Sitemap: https://a-trans.net/sitemap.xml
